@@ -100,14 +100,25 @@
       width: 360px;
     }
   }
-  .login-btn {
-    display: none;
+
+  .login-button {
+    padding:8px;
+    height: 30px;
+    width: 80px;
+    border-radius: 8px;
+    background: #e50914;
+    color: #ffffff;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
+
   @media screen and (min-width: 768px) {
-    .login-btn {
-      display: block;
-      height: 40px;
-      width: 360px;
+    .login-button {
+      padding:8px;
+      height: 80px;
+      width: 80px;
       border-radius: 8px;
       background: #e50914;
       color: #ffffff;
@@ -118,7 +129,6 @@
     }
   }
   .sign-in-btn {
-    display: block;
     height: 40px;
     width: 100%;
     border-radius: 8px;
@@ -128,11 +138,6 @@
     border: none;
     outline: none;
     cursor: pointer;
-  }
-  @media screen and (min-width: 768px) {
-    .sign-in-btn {
-      display: none;
-    }
   }
   .error-msg {
     font-size: 14px;

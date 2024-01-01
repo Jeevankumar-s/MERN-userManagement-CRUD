@@ -381,7 +381,32 @@ const Index = () => {
     const [searchTerm, setSearchTerm] = useState('');
   
     const userList = [
-      // ... (same user data)
+      {
+          name: 'Emmett',
+          email: 'Loyalty User',
+          phone:12345
+      },
+      {
+          name: 'jeev',
+          email: 'Loyalty User',
+          phone:12345
+      },
+      {
+          name: 'Emmett',
+          email: 'Loyalty User',
+          phone:12345
+      },
+      {
+          name: 'Emmett',
+          email: 'Loyalty User',
+          phone:12345
+      },
+      {
+          name: 'Emmett',
+          email: 'Loyalty User',
+          phone:12345
+      },
+      // Add other users here...
     ];
   
     const sortedUserList = userList.sort((a, b) => {

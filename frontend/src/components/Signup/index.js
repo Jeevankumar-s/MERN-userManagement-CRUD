@@ -242,7 +242,7 @@ class Signup extends Component {
           
 
           {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
-          <button type="submit" className="login-btn">
+          <button type="submit"  className="login-button">
             Login
           </button>
           <p className="register-text">New User Register Here  
