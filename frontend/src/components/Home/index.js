@@ -7,7 +7,7 @@ import { IoPersonAdd } from "react-icons/io5";
 import { FaUserAlt } from "react-icons/fa";
 import { IoSearchOutline } from "react-icons/io5";
 import './index.css'
-
+import UserItem from '../UserItem'
 const deleteUser=()=>(
     <div
     className="modal fade"
@@ -549,12 +549,10 @@ const Index = () => {
       </div>
 
       <ul className="user-list">
-        {filteredUserList.map((user) => (
-          <li key={user.id} className="user-item">
-            {/* Render user details */}
-          </li>
-        ))}
-      </ul>
+  
+        <UserItem />
+
+  </ul>
             </div>
             {/* desktopview */}
             <hr className="hr-line" />

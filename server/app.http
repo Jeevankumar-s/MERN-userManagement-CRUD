@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
     "email":"kumar2003@gmail.com",
-    "password":"kumarj"
+    "password":"kumar"
 }
 
 ###
@@ -31,7 +31,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkxNTEwZGM4
 
 ###
 GET http://localhost:3303/users/ 
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkxNTEwZGM4ZTEyNWJmMTBjYTVjYjAiLCJpYXQiOjE3MDQxMDI3OTAsImV4cCI6MTcwNDEwNjM5MH0.PO26juxRbqQmOckRAqRLZPgfMgQ4TTEhRVM7MEC5kjk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkxNTEwZGM4ZTEyNWJmMTBjYTVjYjAiLCJpYXQiOjE3MDQyMTA0MjEsImV4cCI6MTcwNDIxNDAyMX0.3Bwua9gTJy8KJMb_ytemA68yUN0cPg1B4aewPGF3FZE
 
 ###
 POST http://localhost:3303/signup 

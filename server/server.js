@@ -79,6 +79,16 @@ app.post('/signup', async (req, res) => {
   }
 });
 
+app.get('/get-users',async(req,res)=>{
+  try {
+    const users = await AddedUser.find();
+    res.json(users);
+  } catch (error) {
+    res.send(error.message)
+    res.status(500).json({ error: 'Error fetching users' });
+  }
+})
+
 app.get('/',(req,res)=>{
     res.send('server running')
 })
