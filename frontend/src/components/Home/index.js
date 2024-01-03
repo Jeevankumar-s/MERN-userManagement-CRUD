@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import { MdEdit } from 'react-icons/md';
 import Cookies from 'js-cookie';
 import { IoIosNotifications,IoMdTrash,IoIosLogOut} from 'react-icons/io';
@@ -208,169 +210,12 @@ const editUser=()=>(
   </div>
 )
 
-const addUser=()=>(
-    <div
-    className="modal fade"
-    id="exampleModalCenter"
-    tabIndex={-1}
-    role="dialog"
-    aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true"
-  >
-    <div className="modal-dialog modal-dialog-centered" role="document">
-      <div className="modal-content">
-        <div
-          className="modal-header"
-          style={{
-            background:
-              "linear-gradient(89.93deg, #820263 0.05%, #D90368 99.94%)"
-          }}
-        >
-          <h5
-            className="modal-title"
-            id="exampleModalLongTitle"
-            style={{ color: "#ffff" }}
-          >
-            {" "}
-            Add User{" "}
-          </h5>
-          <button
-            type="button"
-            className="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div className="modal-body">
-          <form>
-            <div className="row">
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="exampleInputtext1">First Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleInputtext1"
-                    aria-describedby="textHelp"
-                    placeholder="First Name"
-                  />
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="exampleInputtext1">Last Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleInputtext1"
-                    aria-describedby="textHelp"
-                    placeholder="Last Name"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputtext1">Gender</label>
-              <input
-                type="text"
-                className="form-control"
-                id="exampleInputtext1"
-                aria-describedby="textHelp"
-                placeholder="Gender"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputtext1">Age</label>
-              <input
-                type="Number"
-                className="form-control"
-                id="exampleInputtext1"
-                aria-describedby="textHelp"
-                placeholder="Age"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" className="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputPassword1">
-                Upload Profile Picture
-              </label>
-              <img
-                className="upload-image"
-                src="image/2upload.png"
-                alt="image upload"
-                id="picture"
-                width="100%"
-              />
-              <br />
-              <br />
-              <input
-                id="fileinput"
-                type="file"
-                name="fileinput"
-                style={{ display: "none" }}
-              />
-            </div>
-          </form>
-        </div>
-        <div className="modal-footer">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
-          <button type="button" className="btn btn-primary">
-            Save
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+const addUser=() => (
+  <Popup trigger={<button> Trigger</button>} position="right center">
+    <div>Popup content here !!</div>
+  </Popup>
+);
 
-const userList = [
-    {
-        name: 'Emmett',
-        email: 'Loyalty User',
-        phone:12345
-    },
-    {
-        name: 'jeev',
-        email: 'Loyalty User',
-        phone:12345
-    },
-    {
-        name: 'Emmett',
-        email: 'Loyalty User',
-        phone:12345
-    },
-    {
-        name: 'Emmett',
-        email: 'Loyalty User',
-        phone:12345
-    },
-    {
-        name: 'Emmett',
-        email: 'Loyalty User',
-        phone:12345
-    },
-    // Add other users here...
-  ];
 const Index = () => {
     const onClickLogOut=()=>(
         Cookies.remove('jwt_token')
@@ -380,34 +225,6 @@ const Index = () => {
     const [sortBy, setSortBy] = useState('name'); // 'name', 'lastModified', 'lastInserted'
     const [searchTerm, setSearchTerm] = useState('');
   
-    const userList = [
-      {
-          name: 'Emmett',
-          email: 'Loyalty User',
-          phone:12345
-      },
-      {
-          name: 'jeev',
-          email: 'Loyalty User',
-          phone:12345
-      },
-      {
-          name: 'Emmett',
-          email: 'Loyalty User',
-          phone:12345
-      },
-      {
-          name: 'Emmett',
-          email: 'Loyalty User',
-          phone:12345
-      },
-      {
-          name: 'Emmett',
-          email: 'Loyalty User',
-          phone:12345
-      },
-      // Add other users here...
-    ];
   
     const sortedUserList = userList.sort((a, b) => {
       const compareValue = (sortOrder === 'asc' ? 1 : -1);
@@ -479,10 +296,12 @@ const Index = () => {
                   <div className="col-8">
                     <div className="userlist-items">
                       <div className="Adduser-button-flex">
+                  
                         <button
                           className="Adduser-Button"
                           data-toggle="modal"
                           data-target="#exampleModalCenter"
+                          onClick={addUser}
                         >
                         <IoPersonAdd size={25} />
                           &nbsp; Add User
@@ -502,6 +321,12 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            
+
+            <div></div>
+              </div>
+
+
             {/* mobileresponsive */}
             {/* desktopresponsive */}
             <div className="desktopresponsive">
@@ -549,8 +374,7 @@ const Index = () => {
       </div>
 
       <ul className="user-list">
-  
-        <UserItem />
+    <UserItem />
 
   </ul>
             </div>
@@ -558,42 +382,7 @@ const Index = () => {
             <hr className="hr-line" />
             {/* User List */}
             <ul className="user-list">
-      {userList.map((user, index) => (
-        <li key={user.id} className="user-item">
-          <div className="profile-items">
-            <div className="Notification-user">
-              <div className="Card_message">
-              <div
-              className="Custormize-serial"
-            >
-              {index + 1}.
-            </div>
-                <div className="User_name">{user.name}</div>
-                <div className="User-title">{user.email}</div>
-                <div className="User-title">{user.phone}</div>
-              </div>
-            </div>
-          </div>
-          <div className="icons-row">
-            <div
-              className="Custormize-edit"
-              data-toggle="modal"
-              data-target="#editmodal"
-            >
-              {/* Edit icon */}
-              <MdEdit className="edit-icon" size={30} />
-            </div>
-            <div
-              className="Custormize-delete"
-              data-toggle="modal"
-              data-target="#deletemodal"
-            >
-              {/* Delete icon */}
-              <IoMdTrash className="delete-icon" size={30} />
-            </div>
-          </div>
-        </li>
-      ))}
+     
     </ul>
             {/* User List */}
             {/* Add user modal */}

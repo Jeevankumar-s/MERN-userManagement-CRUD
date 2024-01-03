@@ -134,7 +134,7 @@ app.post('/add-users', verifyToken, async (req, res) => {
 
 
 // Read all users
-app.get('/users', verifyToken, async (req, res) => {
+app.get('/users',async (req, res) => {
   try {
     const users = await AddedUser.find();
     res.json(users);

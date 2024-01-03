@@ -21,12 +21,12 @@ Content-Type: application/json
 ###
 POST http://localhost:3303/add-users/ 
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkxNTEwZGM4ZTEyNWJmMTBjYTVjYjAiLCJpYXQiOjE3MDQxMDI3OTAsImV4cCI6MTcwNDEwNjM5MH0.PO26juxRbqQmOckRAqRLZPgfMgQ4TTEhRVM7MEC5kjk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkxNTEwZGM4ZTEyNWJmMTBjYTVjYjAiLCJpYXQiOjE3MDQzMDI0OTUsImV4cCI6MTcwNDMwNjA5NX0.tTJxV-7t8WbqURyfqRSIsY0Bks0Jcr8XPf9la65C5kY
 
 {
-    "name":"jeev",
-    "email":"kirut",
-    "phone":"391284"
+    "name":"kiruthika",
+    "email":"kiruthika@gmail.com",
+    "phone":"100"
 }
 
 ###

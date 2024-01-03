@@ -20,6 +20,7 @@ const UserDetails = ({ user }) => {
     setShowDetails(false);
   };
 
+  
   return (
     <div>
       <div onClick={handleClick}>
